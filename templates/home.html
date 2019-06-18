@@ -1,0 +1,39 @@
+<style>
+    @import url('https://fonts.googleapis.com/css?family=Roboto');
+
+    body {
+        font-family: 'Roboto', "HelveticaNeueLight", "HelveticaNeue-Light", "Helvetica Neue Light", "HelveticaNeue", "Helvetica Neue", 'TeXGyreHerosRegular', "Helvetica", "Tahoma", "Geneva", "Arial", sans-serif;
+    }
+    
+    table, th, td {
+        border: 1px solid black;   
+        margin-left:auto; 
+        margin-right:auto;
+        text-align:center;
+
+    }
+</style>
+<html>
+  <body>
+    <h1 align= "center">Virtual beer counter</h1>
+    	<table>
+    		<tr>
+    			<th></th>
+    			<th>Name 1</th>
+    			<th>Name 2</th>
+    			<th>Beers count</th>
+    			<th>who owes beers</th>
+    			<th></th>
+			</tr>
+    		{% for beerpair in beerpairs %}
+    			<tr>
+    				<td><form method="POST" action="{{ url_for('update_first', beer_pair_id=beerpair.beer_pair_id) }}" ><input type="submit" name="name1_button" value="+ Beer"></form></td>    				
+    				<td name = "name1">{{beerpair.name1}}</td>
+            		<td name = "name2">{{beerpair.name2}}</td>
+            		<td name = "beers">{{beerpair.beers}}</td>
+            		<td name = "side">{{beerpair.side}}</td>    				
+    				<td><form method="POST" action="{{ url_for('update_second', beer_pair_id=beerpair.beer_pair_id) }}" ><input type="submit" name="name2_button" value="+ Beer"></form></td>    				
+  				</tr>      
+    		{% endfor %}
+    	</table>
+  </body>
