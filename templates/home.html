@@ -5,12 +5,13 @@
         font-family: 'Roboto', "HelveticaNeueLight", "HelveticaNeue-Light", "Helvetica Neue Light", "HelveticaNeue", "Helvetica Neue", 'TeXGyreHerosRegular', "Helvetica", "Tahoma", "Geneva", "Arial", sans-serif;
     }
     
+
     table, th, td {
+        border-collapse: collapse;
         border: 1px solid black;   
         margin-left:auto; 
         margin-right:auto;
         text-align:center;
-
     }
 </style>
 <html>
@@ -22,7 +23,7 @@
     			<th>Name 1</th>
     			<th>Name 2</th>
     			<th>Beers count</th>
-    			<th>who owes beers</th>
+    			<th>Who owes beers</th>
     			<th></th>
 			</tr>
     		{% for beerpair in beerpairs %}
