@@ -6,7 +6,7 @@ I decided to try **Flask framework** and implement this as a solution for our lo
 
 Dependencies:  pip3 install --user flask sqlalchemy flask-sqlalchemy
 
-To run the application simply use ** python3 virtualbeer.py ** . The application is running on localhost:5000.
+To run the application simply use **python3 virtualbeer.py** . The application is running on localhost:5000.
 
 
 * Future work:
