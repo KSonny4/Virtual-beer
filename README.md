@@ -13,3 +13,6 @@ To run the application simply use ** python3 virtualbeer.py ** . The application
   * Update after "+ Beer" click.
   * Registration for each user.
   * Possibility of creating a group for each friends group.
+
+
+![Visualization of our FB chat](https://raw.githubusercontent.com/KSonny4/Virtual-beer/master/demo.png)
