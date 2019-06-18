@@ -65,7 +65,6 @@ systemd-python==234
 tqdm==4.31.1
 typing-extensions==3.7.2
 urllib3==1.22
-usb-creator==0.3.3
 uWSGI==2.0.18
 virtualenv==16.4.3
 virtualenv-clone==0.5.3
