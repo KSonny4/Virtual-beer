@@ -4,11 +4,11 @@ from flask import Flask
 from flask import redirect
 from flask import render_template
 from flask import request
-
 from flask_sqlalchemy import SQLAlchemy
+from itertools import combinations
 
 project_dir = os.path.dirname(os.path.abspath(__file__))
-database_file = "sqlite:///{}".format(os.path.join(project_dir, "virtualbeer.db"))
+database_file = "sqlite:///{}".format(os.path.join(project_dir, "app.db"))
 
 app = Flask(__name__)
 app.config["SQLALCHEMY_DATABASE_URI"] = database_file
@@ -33,10 +33,13 @@ class BeerPair(db.Model):
 
   
 def fill():    
-    items = [dict(name1='Petr', name2='Hofy', beers = '0', side=''),
-         dict(name1='Petr', name2='Simon', beers = '0', side=''),
-         dict(name1='Simon', name2='Hofy', beers = '0', side='')]
+    users = ['Petr', 'Hofy', 'Krtek', 'Šimon', 'Víťa', 'Přěňěk', 'Sergej', 'Kuba','Ivan', 'Dita', 'Palec', 'Matouš']
+    pairs = combinations(users,2)
+    items = []
+    for pair in pairs:
+        items.append(dict(name1= pair[0], name2=pair[1], beers = '0', side=''))
 
+    
     for item in items:        
         add_new = BeerPair(name1 = item['name1'], name2 = item['name2'], beers = item['beers'], side = item['side'])
         db.session.add(add_new)
