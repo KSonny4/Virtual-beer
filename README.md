@@ -6,15 +6,14 @@
 
 Since I met my friends we always promise each other to buy a beer for small favors. However nobody really remembers the count.
 
-I decided to try **Flask framework** and implement this as a solution for our long lasting problem. This application using **SQLite**, **Python** and **Flask** is going to keep track of beer between each pair of friends. This application is deployed using **heroku**.
+I decided to try **Flask framework** and implement this as a solution for our long lasting problem. This application using **SQLite**, **Python** and **Flask** is tracking beer count between each pair of friends. This application is deployed using **Heroku**.
 
 Dependencies:  pip3 install --user flask sqlalchemy flask-sqlalchemy
 
 To run the application simply use **python3 virtualbeer.py** . The application is running on localhost:5000.
 
 
-* Future work:
-  * Update after "+ Beer" click.
+* Future work:  
   * Registration for each user.
   * Possibility of creating a group for each friends group.
 
