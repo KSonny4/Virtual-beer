@@ -14,6 +14,7 @@ To run the application simply use **python3 virtualbeer.py** . The application i
 
 
 * Future work:  
+  * Simon ows Dita +5 // Dita ows Simon -5. Visualization as a matrix.
   * Registration for each user.
   * Possibility of creating a group for each friends group.
 
